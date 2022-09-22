@@ -20,4 +20,4 @@ jobs:
           ruby-version: 3.0.0
       # Add or replace test runners here
       - name: Run tests
-        run: bin/rake
+        run: chmod -x bin/rake
