@@ -83,6 +83,7 @@ GEM
       xpath (~> 3.2)
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
+    coveralls-lcov (1.7.0)
     coveralls_reborn (0.25.0)
       simplecov (>= 0.18.1, < 0.22.0)
       term-ansicolor (~> 1.6)
@@ -184,6 +185,8 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
+    nokogiri (1.13.8-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     public_suffix (5.0.0)
@@ -261,6 +264,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    sqlite3 (1.5.0-arm64-darwin)
     sqlite3 (1.5.0-x86_64-linux)
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
@@ -299,11 +303,13 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   bootsnap
   capybara
+  coveralls-lcov
   coveralls_reborn (~> 0.25.0)
   cucumber-rails
   database_cleaner
@@ -314,7 +320,8 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rspec-rails
   selenium-webdriver
-  simplecov-lcov (~> 0.8.0)
+  simplecov
+  simplecov-lcov
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails

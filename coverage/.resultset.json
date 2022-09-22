@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/vagrant/ep-esi/app/channels/application_cable/channel.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -11,7 +11,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/channels/application_cable/connection.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -21,7 +21,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/controllers/application_controller.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/controllers/application_controller.rb": {
         "lines": [
           0,
           0
@@ -29,7 +29,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/helpers/application_helper.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/helpers/application_helper.rb": {
         "lines": [
           0,
           0
@@ -37,7 +37,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/jobs/application_job.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -50,7 +50,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/mailers/application_mailer.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -60,7 +60,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/models/application_record.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/models/application_record.rb": {
         "lines": [
           0,
           0,
@@ -70,11 +70,11 @@
         }
       }
     },
-    "timestamp": 1663725436
+    "timestamp": 1663808882
   },
   "Cucumber Features": {
     "coverage": {
-      "/vagrant/ep-esi/app/channels/application_cable/channel.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -84,7 +84,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/channels/application_cable/connection.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -94,7 +94,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/controllers/application_controller.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/controllers/application_controller.rb": {
         "lines": [
           0,
           0
@@ -102,7 +102,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/helpers/application_helper.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/helpers/application_helper.rb": {
         "lines": [
           0,
           0
@@ -110,7 +110,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/jobs/application_job.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -123,7 +123,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/mailers/application_mailer.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -133,7 +133,7 @@
         "branches": {
         }
       },
-      "/vagrant/ep-esi/app/models/application_record.rb": {
+      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/models/application_record.rb": {
         "lines": [
           0,
           0,
@@ -143,6 +143,6 @@
         }
       }
     },
-    "timestamp": 1663725438
+    "timestamp": 1663808883
   }
 }
