@@ -4,7 +4,6 @@ Coveralls.wear!('rails')
 
 require 'simplecov'
 require 'simplecov-lcov'
-SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
 SimpleCov.start
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'

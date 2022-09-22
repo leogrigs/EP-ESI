@@ -2,6 +2,10 @@ require 'coveralls'
 require 'simplecov'
 Coveralls.wear!('rails')
 
+require 'simplecov'
+require 'simplecov-lcov'
+SimpleCov.start
+
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
