@@ -1,0 +1,23 @@
+name: "Ruby on Rails CI"
+on:
+  push:
+    branches: [ "main", "feature/Actions" ]
+  pull_request:
+    branches: [ "main", "feature/Actions" ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      # Add or replace dependency steps here
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
+        with:
+          bundler-cache: true
+          ruby-version: 3.0.0
+      # Add or replace test runners here
+      - name: Run tests
+        run: chmod -x bin/rake
