@@ -21,7 +21,7 @@ jobs:
       - name: Run tests
         run: chmod -x bin/rake
       
-      - name: Coveralls GitHub Action
+      # - name: Coveralls GitHub Action
   # You may pin to the exact commit or the version.
   # uses: coverallsapp/github-action@9ba913c152ae4be1327bfb9085dc806cedb44057
         # uses: coverallsapp/github-action@1.1.3
