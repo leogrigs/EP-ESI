@@ -22,7 +22,8 @@ Leonardo Grigorio Ferreira - 11796191
 Jhonatan Vinicius Brito Santos - 11795954
 Leandro Junior Lins Hawrysz - 11796253
 Leandro Baccarin Costa - 11796166
-
+Bruno Daniel Moreira Plasa - 11796274
+Caroline Molessani de Freitas - 11915748
 
 
 
