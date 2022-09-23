@@ -37,6 +37,7 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.github_token }}
+          repo_token: atNG1uRYGmEUHQdsBYWhex5TiogiNfNF5
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake
