@@ -8,8 +8,13 @@ gem "rails", "~> 7.0.4"
 
 # Coveralls
 gem 'coveralls_reborn', '~> 0.25.0', require: false
+gem 'coveralls-lcov'
+
+# Simplecov
 gem 'simplecov'
-gem 'simplecov-lcov', '~> 0.8.0'
+gem 'simplecov-lcov'
+
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
