@@ -9,6 +9,9 @@ application up and running.
 ### Code Climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/48ae43eabd166b88f491/maintainability)](https://codeclimate.com/github/leogrigs/EP-ESI/maintainability)
 
+### GitHub Actions Workflow
+[!github-actions-workflow](https://github.com/leogrigs/EP-ESI/actions/workflows/rubyonrails.yml/badge.svg)
+
 Things you may want to cover:
 
 * Ruby version
