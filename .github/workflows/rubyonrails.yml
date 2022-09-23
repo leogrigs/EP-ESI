@@ -28,5 +28,5 @@ jobs:
         with:
           # 
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          repo_token: atNG1uRYGmEUHQdsBYWhex5TiogiNfNF5
+          coveralls-endpoint: https://coveralls.io/github/leogrigs/EP-ESI
           # Coveralls Enterprise server (more info: https://enterprise.coveralls.io)
