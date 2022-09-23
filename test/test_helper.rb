@@ -1,6 +1,11 @@
 require 'coveralls'
 Coveralls.wear!('rails')
 
+require 'simplecov'
+require 'simplecov-lcov'
+SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
+SimpleCov.start
+
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
