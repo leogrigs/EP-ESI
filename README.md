@@ -3,6 +3,8 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+[![Coverage Status](https://coveralls.io/repos/github/leogrigs/EP-ESI/badge.svg?branch=main)](https://coveralls.io/github/leogrigs/EP-ESI?branch=main)
+
 Things you may want to cover:
 
 * Ruby version
