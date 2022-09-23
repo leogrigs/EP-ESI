@@ -19,6 +19,9 @@ descrição do projeto
 ## Contributors
 
 Leonardo Grigorio Ferreira - 11796191
+Jhonatan Vinicius Brito Santos - 11795954
+Leandro Junior Lins Hawrysz - 11796253
+Leandro Baccarin Costa - 11796166
 
 
 
