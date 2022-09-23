@@ -27,6 +27,7 @@ jobs:
         with:
           # Code Climate test reporter ID
           cc_test_reporter_id: f3db11147c6cfdfc61faca0632f7c1c17202169eb096a171fe437a88432fc22e
+          command: rake spec
       # - name: Coveralls GitHub Action
   # You may pin to the exact commit or the version.
   # uses: coverallsapp/github-action@9ba913c152ae4be1327bfb9085dc806cedb44057
