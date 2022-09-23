@@ -25,7 +25,7 @@ jobs:
           env:
             CC_TEST_REPORTER_ID: 945dfb58a832d233a3caeb84e3e6d3be212e8c7abcb48117fce63b9adcb43647
           with:
-            coverageCommand: yarn coverage
+            coverageCommand: rake spec
 
       # - name: Coveralls GitHub Action
   # You may pin to the exact commit or the version.
