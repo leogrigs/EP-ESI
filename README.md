@@ -12,7 +12,7 @@ descrição do projeto
 
 [![Coverage Status](https://coveralls.io/repos/github/leogrigs/EP-ESI/badge.svg?branch=main)](https://coveralls.io/github/leogrigs/EP-ESI?branch=main)
 
-[![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://google.com)
+[![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://fathomless-spire-23639.herokuapp.com)
 
 #
 
