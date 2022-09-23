@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/channels/application_cable/channel.rb": {
+      "/vagrant/EP-ESI/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -11,7 +11,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/channels/application_cable/connection.rb": {
+      "/vagrant/EP-ESI/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -21,7 +21,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/controllers/application_controller.rb": {
+      "/vagrant/EP-ESI/app/controllers/application_controller.rb": {
         "lines": [
           0,
           0
@@ -29,7 +29,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/helpers/application_helper.rb": {
+      "/vagrant/EP-ESI/app/helpers/application_helper.rb": {
         "lines": [
           0,
           0
@@ -37,7 +37,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/jobs/application_job.rb": {
+      "/vagrant/EP-ESI/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -50,7 +50,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/mailers/application_mailer.rb": {
+      "/vagrant/EP-ESI/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -60,7 +60,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/models/application_record.rb": {
+      "/vagrant/EP-ESI/app/models/application_record.rb": {
         "lines": [
           0,
           0,
@@ -70,15 +70,11 @@
         }
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1663727620
-=======
-    "timestamp": 1663810279
->>>>>>> a84cbf5713d7f3fbefb5db2ced24d370cdc3fc83
+    "timestamp": 1663894045
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/channels/application_cable/channel.rb": {
+      "/vagrant/EP-ESI/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -88,7 +84,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/channels/application_cable/connection.rb": {
+      "/vagrant/EP-ESI/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -98,7 +94,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/controllers/application_controller.rb": {
+      "/vagrant/EP-ESI/app/controllers/application_controller.rb": {
         "lines": [
           0,
           0
@@ -106,7 +102,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/helpers/application_helper.rb": {
+      "/vagrant/EP-ESI/app/helpers/application_helper.rb": {
         "lines": [
           0,
           0
@@ -114,7 +110,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/jobs/application_job.rb": {
+      "/vagrant/EP-ESI/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -127,7 +123,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/mailers/application_mailer.rb": {
+      "/vagrant/EP-ESI/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -137,7 +133,7 @@
         "branches": {
         }
       },
-      "/Users/leogrigs/Desktop/Facul/Semestre 6/ESI/EP-ESI/app/models/application_record.rb": {
+      "/vagrant/EP-ESI/app/models/application_record.rb": {
         "lines": [
           0,
           0,
@@ -147,10 +143,6 @@
         }
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1663727465
-=======
-    "timestamp": 1663810280
->>>>>>> a84cbf5713d7f3fbefb5db2ced24d370cdc3fc83
+    "timestamp": 1663894035
   }
 }
