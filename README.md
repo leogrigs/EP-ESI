@@ -1,6 +1,7 @@
-# NOME_DO_PROJETO
+# MyPOD
+### My Personal Organization Panel
 
-descrição do projeto
+Atualmente, com a popularização do home office, modelos de trabalho híbridos e ensino a distância, a necessidade de encontrar alguma forma de se organizar aumentou consideravelmente. Nossa solução será uma plataforma minimalista e intuitiva, voltada para organização pessoal para auxiliar nas longas horas de trabalho e estudo.
 
 #
 
