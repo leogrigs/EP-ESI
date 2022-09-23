@@ -12,3 +12,10 @@ descrição do projeto
 [![Coverage Status](https://coveralls.io/repos/github/leogrigs/EP-ESI/badge.svg?branch=main)](https://coveralls.io/github/leogrigs/EP-ESI?branch=main)
 
 
+## Contributors
+
+Leonardo Grigorio Ferreira - 11796191
+
+
+
+
