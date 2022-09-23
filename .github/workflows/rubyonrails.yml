@@ -19,14 +19,14 @@ jobs:
           bundler-cache: true
       # Add or replace test runners here
       - name: Run tests
-        run: chmod -x bin/rake
-      - name: CC Coverage
-        uses: paambaati/codeclimate-action@v2.2.4
-        env:
-          CC_TEST_REPORTER_ID: 945dfb58a832d233a3caeb84e3e6d3be212e8c7abcb48117fce63b9adcb43647
+        run: rake
+      - name: Setup Code Climate
+        # You may pin to the exact commit or the version.
+        # uses: amancevice/setup-code-climate@2d0861ea2da616c79b758c4646ca49bfdc651a4c
+        uses: amancevice/setup-code-climate@v0
         with:
-          coverageCommand: rake spec
-
+          # Code Climate test reporter ID
+          cc_test_reporter_id: f3db11147c6cfdfc61faca0632f7c1c17202169eb096a171fe437a88432fc22e
       # - name: Coveralls GitHub Action
   # You may pin to the exact commit or the version.
   # uses: coverallsapp/github-action@9ba913c152ae4be1327bfb9085dc806cedb44057
