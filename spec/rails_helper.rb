@@ -3,10 +3,8 @@ Coveralls.wear!('rails')
 
 require 'simplecov'
 require 'simplecov-lcov'
-SimpleCov::Formatter::LcovFormatter.config do |c|
-  c.lcov_file_name = 'lcov.info' # default: "YOUR_PROJECT_NAME.lcov"
-  c.single_report_path = 'coverage/lcov/test/lcov.info'
-end
+SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
+SimpleCov.start
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'

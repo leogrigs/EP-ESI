@@ -3,10 +3,8 @@ Coveralls.wear!('rails')
 
 require 'simplecov'
 require 'simplecov-lcov'
-SimpleCov::Formatter::LcovFormatter.config do |c|
-  c.lcov_file_name = 'lcov.info' # default: "YOUR_PROJECT_NAME.lcov"
-  c.single_report_path = 'coverage/lcov/test/lcov.info'
-end
+SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
+SimpleCov.start
 
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
