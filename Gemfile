@@ -6,14 +6,9 @@ ruby "3.0.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
-# Coveralls
-gem 'coveralls_reborn', '~> 0.25.0', require: false
-gem 'coveralls-lcov'
-
 # Simplecov
-gem 'simplecov'
-gem 'simplecov-lcov'
-
+gem "simplecov"
+gem 'simplecov-lcov', '~> 0.8.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
