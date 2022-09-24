@@ -1,6 +1,7 @@
-# NOME_DO_PROJETO
+# MyPOD
+### My Personal Organization Panel
 
-descrição do projeto
+Atualmente, com a popularização do home office, modelos de trabalho híbridos e ensino a distância, a necessidade de encontrar alguma forma de se organizar aumentou consideravelmente. Nossa solução será uma plataforma minimalista e intuitiva, voltada para organização pessoal para auxiliar nas longas horas de trabalho e estudo.
 
 #
 
@@ -12,14 +13,18 @@ descrição do projeto
 
 [![Coverage Status](https://coveralls.io/repos/github/leogrigs/EP-ESI/badge.svg?branch=main)](https://coveralls.io/github/leogrigs/EP-ESI?branch=main)
 
-[![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://google.com)
+[![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://fathomless-spire-23639.herokuapp.com)
 
 #
 
 ## Contributors
 
-Leonardo Grigorio Ferreira - 11796191
-
+##### Leonardo Grigorio Ferreira - 11796191
+##### Jhonatan Vinicius Brito Santos - 11795954
+##### Leandro Junior Lins Hawrysz - 11796253
+##### Leandro Baccarin Costa - 11796166
+##### Bruno Daniel Moreira Plasa - 11796274
+##### Caroline Molessani de Freitas - 11915748
 
 
 
