@@ -50,7 +50,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # PostgreSQL version for production
-# gem 'pg', '~> 1.4', '>= 1.4.3', group: :production 
+gem 'pg', '~> 1.4', '>= 1.4.3', group: :production 
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
