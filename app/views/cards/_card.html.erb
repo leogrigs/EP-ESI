@@ -1,22 +1,23 @@
-<div id="<%= dom_id card %>">
-  <p>
-    <strong>Name:</strong>
+<div id="<%= dom_id card %>" class="card-container">
+  <p class="card-container-item-name">
     <%= card.name %>
   </p>
 
-  <p>
-    <strong>Description:</strong>
+  <p class="card-container-item-description">
     <%= card.description %>
   </p>
 
-  <p>
-    <strong>Status:</strong>
+  <p class="card-container-item-status">
     <%= card.status %>
   </p>
 
-  <p>
+  <%
+=begin%>
+ <p>
     <strong>Group:</strong>
     <%= card.group_id %>
-  </p>
+  </p> 
+<%
+=end%>
 
 </div>
