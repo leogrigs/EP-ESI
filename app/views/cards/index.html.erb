@@ -4,10 +4,9 @@
 
 <div id="cards">
   <% @cards.each do |card| %>
+  <a href="/cards/<%=card.id%>">
     <%= render card %>
-    <p>
-      <%= link_to "Show this card", card %>
-    </p>
+  </a>
   <% end %>
 </div>
 

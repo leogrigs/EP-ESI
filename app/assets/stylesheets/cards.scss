@@ -1,34 +1,42 @@
-.card-container {
-    width: 200px;
-    height: 200px;
-    padding: 8px;
-
+#cards {
     display: flex;
-    // justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 0, 0.55);
-
-    &-item{
-        &-name{
-            font-weight: bolder;
-            color: red;
-            margin-bottom: 16px;
-        }
-        &-description {
-            border: 1px solid black;
-            border-radius: 4px;
-            padding: 8px;
-            width: 174px;
-            height: 100px;
-        }
-        &-status {
-            font-size: 12px;
-            font-weight: bold;
+    margin: 32px;
+    .card-container {
+        width: 200px;
+        height: 200px;
+        padding: 8px;
+        margin: 16px;
+    
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    
+        border: 1px solid black;
+        background-color: rgba(255, 255, 0, 0.55);
+    
+        &-item{
+            &-name{
+                font-weight: bolder;
+                color: red;
+                margin-bottom: 16px;
+            }
+            &-description {
+                border: 1px solid black;
+                border-radius: 4px;
+                padding: 8px;
+                width: 174px;
+                height: 100px;
+            }
+            &-status {
+                color: blue;
+                font-size: 12px;
+                font-weight: bold;
+                position: relative;
+                top: 24px;
+                left: 64px;
+            }
         }
     }
 }
