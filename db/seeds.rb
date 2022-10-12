@@ -7,6 +7,11 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 10.times do |i|
-    c = Card.new({name: "Card #{i}", description: "This is description for card #{i}", status: "todo"})
+    # Create groups
+    g = Group.new({description: "This is description for Group #{i}", card_qtd: 1})
+    g.save
+    
+    # Create cards
+    c = Card.new({name: "Card #{i}", description: "This is description for card #{i}", status: "todo", group_id: i+1})
     c.save
 end
