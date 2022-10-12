@@ -19,7 +19,7 @@ jobs:
           bundler-cache: true
       # Migrating rails database for test env
       - name: Migrating db
-        run: bundle exec bin/rails db:migrate RAILS_ENV=test
+        run: bundle exec rails db:migrate RAILS_ENV=test
       # Run tests for rails, including rspec and cucumber
       - name: Run tests
         run: bundle exec rake
