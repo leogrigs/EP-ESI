@@ -25,6 +25,11 @@ RSpec.describe "/cards", type: :request do
     {names: 'my card', descriptions: 'this card descript.', statuss: 'todo', group_ids: 1}
   }
 
+  before(:each) do
+    group = Group.new(description: 'teste')
+    group.save
+  end
+
   describe "GET /index" do
     it "renders a successful response" do
       Card.create! valid_attributes
