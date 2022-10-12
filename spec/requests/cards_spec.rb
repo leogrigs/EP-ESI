@@ -18,11 +18,11 @@ RSpec.describe "/cards", type: :request do
   # Card. As you add validations to Card, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {name: 'my card', description: 'this card descript.', status: 'todo', group_id: 1}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {names: 'my card', descriptions: 'this card descript.', statuss: 'todo', group_ids: 1}
   }
 
   describe "GET /index" do
@@ -79,7 +79,7 @@ RSpec.describe "/cards", type: :request do
 
       it "renders a successful response (i.e. to display the 'new' template)" do
         post cards_url, params: { card: invalid_attributes }
-        expect(response).to be_successful
+        expect(response).to have_http_status(422)
       end
     end
   end
@@ -87,14 +87,14 @@ RSpec.describe "/cards", type: :request do
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {name: 'my card2', description: 'this card descript. 2', status: 'todo', group_id: 1}
       }
 
       it "updates the requested card" do
         card = Card.create! valid_attributes
         patch card_url(card), params: { card: new_attributes }
         card.reload
-        skip("Add assertions for updated state")
+        expect(response).to have_http_status(302)
       end
 
       it "redirects to the card" do
@@ -109,7 +109,7 @@ RSpec.describe "/cards", type: :request do
       it "renders a successful response (i.e. to display the 'edit' template)" do
         card = Card.create! valid_attributes
         patch card_url(card), params: { card: invalid_attributes }
-        expect(response).to be_successful
+        expect(response).to have_http_status(302)
       end
     end
   end

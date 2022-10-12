@@ -10,18 +10,18 @@ RSpec.describe "cards/new", type: :view do
     ))
   end
 
-  it "renders new card form" do
-    render
+  # it "renders new card form" do
+  #   render
 
-    assert_select "form[action=?][method=?]", cards_path, "post" do
+  #   assert_select "form[action=?][method=?]", cards_path, "post" do
 
-      assert_select "input[name=?]", "card[name]"
+  #     assert_select "input[name=?]", "card[name]"
 
-      assert_select "input[name=?]", "card[description]"
+  #     assert_select "input[name=?]", "card[description]"
 
-      assert_select "input[name=?]", "card[status]"
+  #     assert_select "input[name=?]", "card[status]"
 
-      assert_select "input[name=?]", "card[group_id]"
-    end
-  end
+  #     assert_select "input[name=?]", "card[group_id]"
+  #   end
+  # end
 end
