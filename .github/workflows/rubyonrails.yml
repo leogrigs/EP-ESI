@@ -19,6 +19,7 @@ jobs:
           bundler-cache: true
       # Add or replace test runners here
       - name: Run tests
+        run: bin/rails db:migrate RAILS_ENV=test
         run: bundle exec rake
   
       - name: Test & publish code coverage
