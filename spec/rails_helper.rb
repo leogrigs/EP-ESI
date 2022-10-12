@@ -1,7 +1,7 @@
 require 'simplecov'
 
 SimpleCov.start 'rails' do
-  if ENV['CI']
+  
     require 'simplecov-lcov'
 
     SimpleCov::Formatter::LcovFormatter.config do |c|
@@ -10,7 +10,7 @@ SimpleCov.start 'rails' do
     end
 
     formatter SimpleCov::Formatter::LcovFormatter
-  end
+  
 
   add_filter %w[version.rb initializer.rb]
 end
@@ -79,4 +79,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # Capybara
+  config.include Capybara::DSL
 end
