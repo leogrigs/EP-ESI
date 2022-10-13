@@ -1,0 +1,33 @@
+<% if @user.errors.any? %>
+            <div id="error_explanation">
+                <h2>
+                <%= pluralize(@user.errors.count, "erro") %> impedem que o aluno sejam gravados no banco de dados:
+                </h2>
+
+
+                <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+                </ul>
+            </div>
+<% end %>
+
+                <p>
+                TESTE
+                </p>
+<div>
+    <h2>Log In</h2>
+    <%= form_with url: "/login", model: @user do |form| %>
+        <p>
+        <%= form.label :username %><br>
+        <%= form.text_field :username %>
+        </p>
+        <%= form.label :password %><br>
+        <%= form.password_field :password %><br>
+
+        <%= submit_tag "Log In" %>
+
+    <% end %>
+
+</div>
