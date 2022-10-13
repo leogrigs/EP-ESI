@@ -1,0 +1,53 @@
+
+<% if @usuarios.errors.any? %>
+            <div id="error_explanation">
+                <h2><%= pluralize(@usuarios.errors.count, "erro") %> impedem que o aluno sejam gravados no banco de dados:</h2>
+            
+                <ul>
+                <% @usuarios.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+                </ul>
+            </div>
+<% end %>
+
+	<div> 
+        <%= form_with scope: :usuario, url: usuarios_path, local: true do |form| %>
+            <p>
+                <%= form.label :nome %><br>
+                <%= form.text_field :nome %>
+            </p>
+            
+            <p> 
+                <%= form.label :email %><br>
+                <%= form.text_field :email %>
+            </p>
+            
+            <p>
+                <%= form.label :senha %><br>
+                <%= form.password_field :senha %>
+            </p>
+            
+            <p>
+                <%= form.label :senha2 %><br>
+                <%= form.password_field :senha2 %>
+            </p>
+            
+            <p> 
+                <%= form.submit 'Registrar' %>
+            </p>
+        <% end %>
+         
+    </div>	
+
+<% if !@usuarios.errors %>
+            <div id="error_explanation">
+                <h2><%= pluralize(@usuarios.count, "usuarios")  %>  banco de dados:</h2>
+            
+                <ul>
+                <% @usuarios.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+                </ul>
+            </div>
+<% end %>
