@@ -1,14 +1,19 @@
 class SessionsController < ApplicationController
 
     def login
-
+        @user = User.all
+    end
+    def new
+        @session = Sessions.new
+    end
+    def erro
+        @session = Sessions.new
     end
     def create
         @user = User.find_by(username: params[:username])
 
         ##authenticate user credentials
         if !!@user && @user.authenticate(params[:password])
-        puts @user.id
 
             #set session and redirect on sucess
             session[:user_id] = @user.id
@@ -17,9 +22,9 @@ class SessionsController < ApplicationController
 
         else
 
-            #error message on fail
-            message = "Algo deu errado! Certifique-se de que seu usuario e senha estão corretos"
-            redirect_to login_path, notice: message
+            #error message on fails
+            @user = User.new
+            render :erro
         end
     end
 
