@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_11_225743) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_13_015018) do
   create_table "cadastro_usuarios", force: :cascade do |t|
     t.string "nome"
     t.string "email"
@@ -19,20 +19,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_225743) do
     t.datetime "updated_at", null: false
   end
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_11_232512) do
   create_table "cards", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "group_id", null: false
+    t.integer "group_id"
     t.index ["group_id"], name: "index_cards_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
     t.string "description"
     t.string "card_qtd"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_areas", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
