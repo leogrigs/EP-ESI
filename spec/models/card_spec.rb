@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Card, type: :model do
+
   before(:each) do
     group = Group.new(description: 'teste')
     group.save
