@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_10_11_225743) do
   create_table "cadastro_usuarios", force: :cascade do |t|
     t.string "nome"
@@ -20,9 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_225743) do
     t.datetime "updated_at", null: false
   end
 
-=======
 ActiveRecord::Schema[7.0].define(version: 2022_10_11_232512) do
->>>>>>> c8061ebbf98a11d6698ca5c39ebd0bb0ce822711
   create_table "cards", force: :cascade do |t|
     t.string "name"
     t.string "description"
