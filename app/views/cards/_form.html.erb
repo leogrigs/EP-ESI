@@ -23,7 +23,7 @@
 
   <div>
     <%= form.label :status, style: "display: block" %>
-    <%= form.select(:status, options_for_select(['To Do', 'Doing', 'Done'], 1)) %>
+    <%= form.select(:status, options_for_select([['To Do', 'todo'], ['Doing', 'doing'], ['Done', 'done']], 1)) %>
   </div>
 
   <div>
