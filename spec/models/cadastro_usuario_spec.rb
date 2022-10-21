@@ -19,6 +19,7 @@ RSpec.describe CadastroUsuario, type: :model do
     usuario.senha =""
     expect(usuario).not_to be_valid
   end
+  
 
   it 'invalido sem confirmacao de senha' do
     usuario = CadastroUsuario.new

@@ -23,7 +23,7 @@ Given('que estou na página de listagem de projetos') do
   end
   
   When('clico em "Show this post" no projeto desejado') do
-    click("Show this post")
+    click_on("Show this post")
   end
   
   When('clico no botão escrito "Destroy this post"') do
