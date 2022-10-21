@@ -25,6 +25,10 @@ class UsuariosController < ApplicationController
         end
       end
     
+  
+
+
+
       private
       def cadastro_usuario_params
         params.require(:usuario).permit(:nome, :email, :senha)

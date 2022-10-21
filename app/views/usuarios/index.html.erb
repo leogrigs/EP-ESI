@@ -23,11 +23,14 @@
             </p>
             
             <p> 
-                <%= form.submit 'Registrar' %>
+                <%= form.submit 'Sign up' %>
             </p>
+            
+            <button style="color:red;">
+                <%= link_to "Sign in", '/login' %>
+            </button>
         <% end %>
-         
-    </div>	
+        </div>	
     
 <% if @usuarios.any? %>
             <div id="error_explanation">
