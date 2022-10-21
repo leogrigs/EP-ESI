@@ -59,6 +59,7 @@ Quando preencho o campo "Nome" com "Leandro"
 Quando preencho o campo "Email" com "teste@teste.com" com o dado ja existente na base de dados
 Quando preencho o campo senha "Senha" com uma "senha"
 Quando preencho o campo confirmacao de senha "Senha confirmation" com "senha" 
+E existe um usuario salvo
 E clico em registrar
 Então deverei ver a mensagem de erro "Email já cadastrado!" do email
 

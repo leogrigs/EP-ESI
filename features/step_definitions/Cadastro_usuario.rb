@@ -37,12 +37,22 @@ Dado('que estou na página de registro de usuario') do
     fill_in string, :with => ""
   end
   
+  Quando('existe um usuario salvo') do
+    usuario = CadastroUsuario.new
+    usuario.nome = "leandro"
+    usuario.email = "teste@teste.com"
+    usuario.senha = "senha"
+    usuario.senha_confirmation = "senha"
+    usuario.save # Write code here that turns the phrase above into concrete actions
+  end
+
   Então('deverei ver a mensagem de erro {string}') do |string|  
     expect(page).to have_text(string)
   end
   
-  Então('deverei ver a mensagem de erro {string} do email') do |string| 
-    sleep(1)
+  Então('deverei ver a mensagem de erro {string} do email') do |string|
+
+  
     expect(page).to have_content(string)
   end
   
