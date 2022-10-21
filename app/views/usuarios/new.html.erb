@@ -1,7 +1,7 @@
 
 <% if @usuarios.errors.any? %>
             <div id="error_explanation">
-                <h2><%= pluralize(@usuarios.errors.count, "erro") %> impedem que o aluno sejam gravados no banco de dados:</h2>
+                <h2><%= pluralize(@usuarios.errors.count, "erro") %> impedem que o usuário sejam gravados no banco de dados:</h2>
             
                 <ul>
                 <% @usuarios.errors.full_messages.each do |msg| %>

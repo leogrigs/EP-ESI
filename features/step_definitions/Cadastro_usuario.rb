@@ -37,15 +37,18 @@ Dado('que estou na página de registro de usuario') do
     fill_in string, :with => ""
   end
   
-  Então('deverei ver a mensagem de erro {string}') do |string|
+  Então('deverei ver a mensagem de erro {string}') do |string|  
+    expect(page).to have_text(string)
+  end
+  
+  Então('deverei ver a mensagem de erro {string} do email') do |string| 
+    sleep(1)
     expect(page).to have_content(string)
   end
   
-  Quando('preencho o campo {string} com algo diferente de {string}') do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+
   
   Quando('preencho o campo {string} com {string} com o dado ja existente na base de dados') do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+    find_field(string).set(string2) # Write code here that turns the phrase above into concrete actions
   end
   
