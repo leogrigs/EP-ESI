@@ -1,30 +1,15 @@
 class SessionsController < ApplicationController
-
-    def login
-        @user = User.all
-    end
-    def new
-        @session = Sessions.new
-    end
-    def erro
-        @session = Sessions.new
-    end
+    before_action :block_access, except: [:destroy]
+    
     def create
-        @user = User.find_by(username: params[:username])
-
-        ##authenticate user credentials
-        if !!@user && @user.authenticate(params[:password])
-
-            #set session and redirect on sucess
-            session[:user_id] = @user.id
-            redirect_to controller: 'users', action: 'show', id: @user.id
-
-
-        else
-
-            #error message on fails
-            @user = User.new
-            render :erro
+        @user = CadastroUsuario.find_by(email: params[:sessions][:email].downcase)
+        if @user && @user.senha == params[:sessions][:senha]
+                    print(@user.id)
+                    sign_in()
+        redirect_to '/usuarios/' + @user.id.to_s
+        else 
+          render :erro_login , status: :unprocessable_entity, content_type: "text/html"
+          headers["Content-Type"] = "text/html"
         end
     end
 

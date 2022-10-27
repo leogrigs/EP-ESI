@@ -2,7 +2,7 @@
 
 	<div> 
         <%= form_with scope: :usuario, url: usuarios_path, local: true do |form| %>
-            <p>
+            <p> 
                 <%= form.label :nome %><br>
                 <%= form.text_field :nome %>
             </p>
@@ -13,21 +13,26 @@
             </p>
             
             <p>
+                <div  id = "senha" name = "senha">
                 <%= form.label :senha %><br>
                 <%= form.password_field :senha %>
+                </div>
             </p>
-            
+             
             <p>
-                <%= form.label :senha2 %><br>
-                <%= form.password_field :senha2 %>
+                <%= form.label :senha_confirmation %><br>
+                <%= form.password_field :senha_confirmation %>
             </p>
             
             <p> 
-                <%= form.submit 'Registrar' %>
+                <%= form.submit 'Sign up' %>
             </p>
+            
+            <button id = "Sign in" style="color:red;">
+                <%= link_to "Sign in", '/login' %>
+            </button>
         <% end %>
-         
-    </div>	
+        </div>	
     
 <% if @usuarios.any? %>
             <div id="error_explanation">

@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_13_015018) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_21_042735) do
   create_table "cadastro_usuarios", force: :cascade do |t|
     t.string "nome"
     t.string "email"
     t.string "senha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "senha_confirmation"
   end
 
   create_table "cards", force: :cascade do |t|
