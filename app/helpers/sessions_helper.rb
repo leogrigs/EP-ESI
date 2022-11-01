@@ -7,7 +7,7 @@ module SessionsHelper
     end
     def block_access
                 if current_user.present?
-                           redirect_to users_path
+                           redirect_to '/usuarios/' + current_user.id.to_s
                 end
     end
 end
