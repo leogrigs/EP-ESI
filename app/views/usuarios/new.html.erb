@@ -1,7 +1,7 @@
 
 <% if @usuarios.errors.any? %>
             <div id="error_explanation">
-                <h2><%= pluralize(@usuarios.errors.count, "erro") %> impedem que o aluno sejam gravados no banco de dados:</h2>
+                <h2><%= pluralize(@usuarios.errors.count, "erro") %> impedem que o usuário sejam gravados no banco de dados:</h2>
             
                 <ul>
                 <% @usuarios.errors.full_messages.each do |msg| %>
@@ -29,13 +29,17 @@
             </p>
             
             <p>
-                <%= form.label :senha2 %><br>
-                <%= form.password_field :senha2 %>
+                <%= form.label :senha_confirmation %><br>
+                <%= form.password_field :senha_confirmation %>
             </p>
             
             <p> 
-                <%= form.submit 'Registrar' %>
+                <%= form.submit 'Sign Up' %>
             </p>
+            
+            <button style="color:red;">
+                <%= link_to "Sign in", '/login' %>
+            </button>   
         <% end %>
          
     </div>	
