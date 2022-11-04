@@ -13,14 +13,9 @@
           </button>
       </div>
       <div class="card-status">
-          <%= button_to 'Press me', next_status_path(card.id), method: :get %>
-          <button class="card-status-btn" onclick="<%= card.previousStatus()%>">
-              <img class="card-status-btn-img-reverse" src="https://images.vexels.com/media/users/3/136479/isolated/preview/72ca95e059828aea4edc31c04b0556ce-proxima-seta-1.png" alt="">
-          </button>
+          <%= button_to '<', previous_status_path(card.id), method: :put, class: "card-status-btn" %>
           <span><%= format_status(card.status) %></span>
-          <button class="card-status-btn" onClick="<%= card.nextStatus()%>">
-              <img class="card-status-btn-img" src="https://images.vexels.com/media/users/3/136479/isolated/preview/72ca95e059828aea4edc31c04b0556ce-proxima-seta-1.png" alt="">
-          </button>
+          <%= button_to '>', next_status_path(card.id), method: :put, class: "card-status-btn" %>
       </div>
   </div>
 </div>

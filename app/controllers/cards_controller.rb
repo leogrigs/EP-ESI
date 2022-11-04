@@ -58,11 +58,15 @@ class CardsController < ApplicationController
   end
 
   def changeNextStatus()
-    puts @cards
+    @card.nextStatus
+    @card.save
+    redirect_to '/cards'
   end
 
   def changePreviousStatus()
-    @card.previousStatus()      
+    @card.previousStatus
+    @card.save
+    redirect_to '/cards'     
   end
 
   private

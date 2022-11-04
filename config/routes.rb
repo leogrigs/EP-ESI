@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :usuarios
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  get '/change_next_status/:id', to: 'cards#changeNextStatus', as: 'next_status'
-  get '/change_previous_status/:id', to: 'cards#changePreviousStatus', as: 'button'
+  put '/change_next_status/:id', to: 'cards#changeNextStatus', as: 'next_status'
+  put '/change_previous_status/:id', to: 'cards#changePreviousStatus', as: 'previous_status'
 
   # Defines the root path route ("/")
   # root "articles#index"
