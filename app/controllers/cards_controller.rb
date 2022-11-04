@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :set_card, only: %i[ show edit update destroy ]
+  before_action :set_card, only: %i[ show edit update destroy changeNextStatus changePreviousStatus ]
 
   # GET /cards or /cards.json
   def index
@@ -55,6 +55,14 @@ class CardsController < ApplicationController
       format.html { redirect_to cards_url, notice: "Card was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def changeNextStatus()
+    puts @cards
+  end
+
+  def changePreviousStatus()
+    @card.previousStatus()      
   end
 
   private

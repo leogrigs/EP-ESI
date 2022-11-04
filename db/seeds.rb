@@ -8,7 +8,7 @@
 
 10.times do |i|
     # Create groups
-    g = Group.new({description: "This is description for Group #{i}", card_qtd: 1})
+    g = Group.new({description: "Group #{i}", card_qtd: 1})
     g.save
     
     # Create cards
