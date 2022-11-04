@@ -1,24 +1,21 @@
-<div id="<%= dom_id card %>" class="card-container">
-
-  <p class="card-container-item-name">
-    <%= card.name %>
-  </p>
-
-  <p class="card-container-item-description">
-    <%= card.description %>
-  </p>
-
-  <p class="card-container-item-status">
-    <%= card.status %>
-  </p>
-
-  <%
-=begin%>
- <p>
-    <strong>Group:</strong>
-    <%= card.group_id %>
-  </p> 
-<%
-=end%>
-
+<div id="<%= dom_id card %>" class="card">
+  <div class="card-title">
+      <span><%= card.name %></span>
+      <span class="card-group"><%= Group.find(card.group_id).description %></span>
+  </div>
+  <div class="card-description">
+      <span><%= card.description %></span>
+  </div>
+  <div class="card-bottom">
+      <div class="card-bottom-timer">
+          <button class="card-status-btn">
+              <img class="card-bottom-timer-img" src="https://w7.pngwing.com/pngs/926/994/png-transparent-computer-icons-clock-symbol-clock-purple-violet-time-thumbnail.png" alt="">
+          </button>
+      </div>
+      <div class="card-status">
+          <%= button_to '<', previous_status_path(card.id), method: :put, class: "card-status-btn" %>
+          <span><%= format_status(card.status) %></span>
+          <%= button_to '>', next_status_path(card.id), method: :put, class: "card-status-btn" %>
+      </div>
+  </div>
 </div>
