@@ -4,7 +4,7 @@ Feature: Card
     I want create/delete cards
 
     Scenario: Add card
-        When I am on create card page
-        And fill the form
+        Given I am on create card page
+        When I fill the form
         And click on "Create Card"
         Then I should see my card in the page

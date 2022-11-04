@@ -17,4 +17,17 @@ RSpec.describe Card, type: :model do
       expect(card.valid?).to be_falsey
     end
   end
+
+  context "Card status" do
+    it 'Must change to next status of a Card' do
+      card = Card.new({name: 'card name', status: 'todo',group_id: 1})
+      card.nextStatus()
+      expect(card.status).to eql('doing')
+    end
+    it 'Must change to previous status of a Card' do
+      card = Card.new({name: 'card name', status: 'doing', group_id: 1})
+      card.previousStatus()
+      expect(card.status).to eql('todo')
+    end
+  end
 end

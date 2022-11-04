@@ -1,64 +1,115 @@
-.card-plus{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    width: fit-content;
-    margin: 16px 32px;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-    img{
-        margin: 0 8px;
-        width: 32px;
-        height: auto;
-    }
-    
+a {
+    text-decoration: none !important;
 }
 
-#cards {
+
+.card {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f6f4ff;
+    border: 1px solid #7A5CFA;
+
     margin: 32px;
 
-    
-    
+    padding: 8px;
+    border-radius: 12px;
 
-    .card-container {
-        width: 200px;
-        height: 200px;
-        padding: 8px;
-        margin: 16px;
-    
+    width: fit-content;
+    min-width: 284px;
+
+    font-family: 'Inter', sans-serif;
+
+    // border: 1px solid black;
+
+    &-title{
+        // border: 1px solid black;
         display: flex;
-        // justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    
+        justify-content: space-between;
+        margin-bottom: 16px;
+        color: #7A5CFA;
+    }
+
+    &-group{
+        border: 1px solid #e5aaaa;
+        border-radius: 16px;
+        padding: 2px 8px;
+        color: #B20000;
+        background-color: #fbefef;
+    }
+
+    &-description{
         border: 1px solid black;
-        background-color: rgba(255, 255, 0, 0.55);
-    
-        &-item{
-            &-name{
-                font-weight: bolder;
-                color: red;
-                margin-bottom: 16px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        display: flex;
+        min-height: 48px;
+        padding: 4px;
+        color: #666666;
+    }
+
+    &-status{
+        // border: 1px solid black;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 4px;
+
+        &-text-todo{
+            width: 48px;
+            text-align: center;
+            color: #7C5A00;
+        }
+        &-text-doing{
+            width: 48px;
+            text-align: center;
+            color: #0085ff;
+        }
+        &-text-done{
+            width: 48px;
+            text-align: center;
+            color: #007e2b;
+        }
+
+        &-btn{
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            &-img{
+                width: 16px;
+                
+                &-reverse{
+                    width: 16px;
+                    transform: rotate(180deg);
+                }
             }
-            &-description {
-                border: 1px solid black;
-                border-radius: 4px;
-                padding: 8px;
-                width: 174px;
-                height: 100px;
+        }
+    }
+
+    &-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-timer{
+            &-img{
+                width: 28px;
             }
-            &-status {
-                color: blue;
-                font-size: 12px;
-                font-weight: bold;
-                position: relative;
-                top: 24px;
-                left: 64px;
-            }
+        }
+    }
+
+    &-plus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 32px;
+            margin-left: 8px;
         }
     }
 }
