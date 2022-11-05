@@ -58,10 +58,8 @@ class CardsController < ApplicationController
   end
 
   def changeNextStatus()
-    puts "Cards status before: #{@card.status}"
     @card.nextStatus
     @card.save
-    puts "Cards status after: #{@card.status}"
     redirect_to '/cards'
   end
 
