@@ -18,11 +18,11 @@ RSpec.describe "/cards", type: :request do
   # Card. As you add validations to Card, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    {name: 'my card', description: 'this card descript.', status: 'todo', group_id: 1}
+    {name: 'my card', description: 'this card descript.', status: 'Doing', group_id: 1}
   }
 
   let(:invalid_attributes) {
-    {names: 'my card', descriptions: 'this card descript.', statuss: 'todo', group_ids: 1}
+    {descriptions: 'this card descript.', status: 'todo', group_ids: 1}
   }
 
   before(:each) do
@@ -116,6 +116,16 @@ RSpec.describe "/cards", type: :request do
         patch card_url(card), params: { card: invalid_attributes }
         expect(response).to have_http_status(302)
       end
+    end
+
+    scenario "should fail" do
+      card = Card.create! valid_attributes
+      visit edit_card_path(card)
+      within('form') do
+        fill_in 'Name', with: ''
+      end
+      click_button 'Update Card'
+      expect(page).to have_content "Name can't be blank"
     end
   end
 
