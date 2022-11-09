@@ -10,10 +10,6 @@ class UsuariosController < ApplicationController
     def show
         @usuarios = CadastroUsuario.find(params[:id])
     end
-
-    def show_by_email
-        @usuarios = CadastroUsuario.find(params[:id])
-    end
     
     def create
         @usuarios = CadastroUsuario.new(cadastro_usuario_params) 
