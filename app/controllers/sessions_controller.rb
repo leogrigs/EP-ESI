@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
     def create
         @user = CadastroUsuario.find_by(email: params[:sessions][:email].downcase)
         if @user && @user.senha == params[:sessions][:senha]
-                    print(@user.id)
                     sign_in()
         redirect_to '/usuarios/' + @user.id.to_s
         else 

@@ -63,13 +63,16 @@ RSpec.describe CadastroUsuario, type: :model do
     end
   end
 
-  it 'testing def new func' do
-    usuario = CadastroUsuario.new
-    usuario.nome = "leandro"
-    usuario.email = "teste@teste.com"
-    usuario.senha = "123"
-    usuario.senha_confirmation = "123"
-    expect(usuario).to be_valid
+  it 'testing def new ' do
+      visit('/usuarios/new')
+      expect(page).to have_content('Nome')   
+  end
+
+  it 'tests for show func' do
+    @user = CadastroUsuario.create(:nome => "leandro" , :email => "leandro@teste.com", :senha =>"123", :senha_confirmation => "123")
+    visit('/usuarios/' + @user.id.to_s)
+    expect(page).to have_content('leandro@teste.com')   
+  
   end
 
 end
