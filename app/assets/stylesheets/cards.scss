@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-a {
-    text-decoration: none !important;
+*{
+    font-family: 'Inter', sans-serif;
 }
-
 
 .card {
     display: flex;
@@ -12,15 +10,11 @@ a {
     background-color: #f6f4ff;
     border: 1px solid #7A5CFA;
 
-    margin: 32px;
-
     padding: 8px;
     border-radius: 12px;
 
     width: fit-content;
     min-width: 284px;
-
-    font-family: 'Inter', sans-serif;
 
     // border: 1px solid black;
 

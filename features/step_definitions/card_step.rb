@@ -45,7 +45,7 @@ Given('I am on cards page') do
     visit '/cards'
 end
 When('I click to change to next status') do
-    find(:xpath, "/html/body/div/div[2]/div[4]/div/div[3]/div[2]/form[2]/button").click
+    find(:xpath, "/html/body/div/div[2]/div[2]/div[4]/div/div[3]/div[2]/form[2]/button").click
 end
 When('I go to this card page') do
     visit '/cards/4'
