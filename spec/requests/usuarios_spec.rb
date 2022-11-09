@@ -22,6 +22,7 @@ RSpec.describe "Usuarios", type: :request do
     end
 
   end
+ 
 
 
   it "login of user is not accepted" do 

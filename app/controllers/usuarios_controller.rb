@@ -10,7 +10,7 @@ class UsuariosController < ApplicationController
     def show
         @usuarios = CadastroUsuario.find(params[:id])
     end
-
+    
     def create
         @usuarios = CadastroUsuario.new(cadastro_usuario_params) 
         if @usuarios.save
