@@ -5,7 +5,6 @@ class CardsController < ApplicationController
   def index
     if params[:status]
       @cards = filter(params[:status])
-      puts @cards
     else
       @cards = Card.all
     end
@@ -86,7 +85,6 @@ class CardsController < ApplicationController
     end
 
     def filter(status)
-      filteredCards = Card.all
       case status
         when 'todo'   
           return Card.where(status: 'todo')
@@ -95,7 +93,5 @@ class CardsController < ApplicationController
         else
           return Card.where(status: 'done')
       end
-      redirect_to '/cards'
-      return filteredCards
     end
 end
