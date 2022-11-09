@@ -3,7 +3,17 @@ class CardsController < ApplicationController
 
   # GET /cards or /cards.json
   def index
-    @cards = Card.all
+    statusToFilter = params[:status]
+    case statusToFilter
+      when 'todo'   
+        @cards = Card.where(status: 'todo')
+      when 'doing'
+        @cards = Card.where(status: 'doing') 
+      when 'done'
+        @cards = Card.where(status: 'done')
+      else
+        @cards = Card.all
+    end
   end
 
   # GET /cards/1 or /cards/1.json
