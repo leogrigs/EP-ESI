@@ -1,6 +1,22 @@
 .dashboard{
     display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    align-items: center;
+    
+
+    &-cards{
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &-filter{
+        display: flex;
+        justify-content: space-between;
+
+        &-btn{
+            width: max-content;
+            margin-right: 8px;
+        }
+        
+    }
 }

@@ -18,7 +18,7 @@ RSpec.describe "/cards", type: :request do
   # Card. As you add validations to Card, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    {name: 'my card', description: 'this card descript.', status: 'Doing', group_id: 1}
+    {name: 'my card', description: 'this card descript.', status: 'doing', group_id: 1}
   }
 
   let(:invalid_attributes) {
@@ -141,6 +141,39 @@ RSpec.describe "/cards", type: :request do
       card = Card.create! valid_attributes
       delete card_url(card)
       expect(response).to redirect_to(cards_url)
+    end
+  end
+
+  describe "change card status" do
+    it "change card status to next status" do
+      card = Card.create! valid_attributes
+      put next_status_path(card.id)
+      card.reload
+      expect(card.status).to eql('done')
+    end
+    it "change card status to previous status" do
+      card = Card.create! valid_attributes
+      put previous_status_path(card.id)
+      card.reload
+      expect(card.status).to eql('todo')
+    end
+  end
+
+  describe "filter by card status" do
+    it "filter by todo status cards" do
+      card = Card.create(name: 'card name', group_id: 1, status: 'todo')
+      get "/cards/status/#{card.status}"
+      expect(response).to have_http_status(200)
+    end
+    it "filter by doing status cards" do
+      card = Card.create! valid_attributes
+      get "/cards/status/#{card.status}"
+      expect(response).to have_http_status(200)
+    end
+    it "filter by done status cards" do
+      card = Card.create(name: 'card name', group_id: 1, status: 'done')
+      get "/cards/status/#{card.status}"
+      expect(response).to have_http_status(200)
     end
   end
 end

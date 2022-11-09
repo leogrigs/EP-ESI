@@ -3,7 +3,11 @@ class CardsController < ApplicationController
 
   # GET /cards or /cards.json
   def index
-    @cards = Card.all
+    if params[:status]
+      @cards = filter(params[:status])
+    else
+      @cards = Card.all
+    end
   end
 
   # GET /cards/1 or /cards/1.json
@@ -78,5 +82,16 @@ class CardsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def card_params
       params.require(:card).permit(:name, :description, :status, :group_id)
+    end
+
+    def filter(status)
+      case status
+        when 'todo'   
+          return Card.where(status: 'todo')
+        when 'doing'
+          return Card.where(status: 'doing') 
+        else
+          return Card.where(status: 'done')
+      end
     end
 end
