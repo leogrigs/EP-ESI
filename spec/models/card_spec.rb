@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Card, type: :model do
 
   before(:each) do
-    group = Group.new(description: 'teste')
+    group = Group.new(description: 'teste', card_qtd: 0)
     group.save
   end
 
