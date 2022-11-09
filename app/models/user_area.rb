@@ -1,2 +1,0 @@
-class UserArea < ApplicationRecord
-end
