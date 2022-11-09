@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   put '/change_previous_status/:id', to: 'cards#changePreviousStatus', as: 'previous_status'
 
   #Routes to filter cards by status
-  get '/cards/:status', to: 'cards#index'
+  get '/cards/status/:status', to: 'cards#index', as: 'cards_filter'
 
   # Defines the root path route ("/")
   # root "articles#index"
