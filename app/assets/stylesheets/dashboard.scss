@@ -1,9 +1,18 @@
 .dashboard{
-    display: flex;
-    margin-top: 16px;
-    padding: 16px;
-    
 
+    &-content{
+        display: flex;
+        margin-top: 16px;
+        padding: 16px;
+    }
+
+    &-news{
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     &-cards{
         display: flex;
         justify-content: start;
