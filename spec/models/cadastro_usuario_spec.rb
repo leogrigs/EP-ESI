@@ -63,4 +63,13 @@ RSpec.describe CadastroUsuario, type: :model do
     end
   end
 
+  it 'testing def new func' do
+    usuario = CadastroUsuario.new
+    usuario.nome = "leandro"
+    usuario.email = "teste@teste.com"
+    usuario.senha = "123"
+    usuario.senha_confirmation = "123"
+    expect(usuario).to be_valid
+  end
+
 end

@@ -1,0 +1,15 @@
+<header>
+    <div>
+        <a class="logo-link" href=<%= root_path %>>
+            <%= image_tag("app_logo.png", width:'200') %>
+        </a>
+    </div>
+
+    <div class="header-menu">
+        <%= link_to "MyHome", root_path, class: "nav-button" %>
+        <%= link_to "MyTasks", cards_path, class: "nav-button" %>
+        <%= link_to "MyUser", usuarios_path, class: "nav-button" %>
+    </div>
+
+    <div></div>
+</header>
