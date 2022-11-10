@@ -15,6 +15,8 @@ Atualmente, com a popularização do home office, modelos de trabalho híbridos 
 
 [![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://fathomless-spire-23639.herokuapp.com)
 
+Pivotal Tracker: https://www.pivotaltracker.com/n/projects/2603033
+
 #
 
 ## Contributors

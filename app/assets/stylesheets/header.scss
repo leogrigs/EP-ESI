@@ -1,0 +1,37 @@
+.logo-link{
+    color: inherit;
+}
+
+header{
+    background-color: #7A5CFA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu{
+    float: right;
+    display: inline-block;
+    margin: auto 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-button{
+    border: none;
+    color: #FEFEFE;
+    padding: 7px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 12px;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    border: 2px solid #FEFEFE;
+}
+
+.nav-button:hover{
+    background-color: #FEFEFE;
+    color: #7A5CFA;
+    border: #7A5CFA;
+}

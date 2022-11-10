@@ -52,15 +52,28 @@ RSpec.describe CadastroUsuario, type: :model do
       usuario.senha = "senha"
       usuario.senha_confirmation = "senha"
       usuario.save
-      visit('/usuarios')
-      fill_in('Nome', with: 'leandro')
-      fill_in('Email', with: 'teste@teste.com')
-      fill_in('Senha', with: '123')
-      fill_in('Senha confirmation', with: '123')
-      click_button('Sign up')
+
+      usuario2 = CadastroUsuario.new
+      usuario2.nome = "leandro"
+      usuario2.email = "teste@teste.com"
+      usuario2.senha = "senha"
+      usuario2.senha_confirmation = "senha"
+      usuario2.save
       expect(usuario).to_not be_valid
-      expect(page).to have_content('Email já cadastrado!')
+      
     end
+  end
+
+  it 'testing def new ' do
+      visit('/usuarios/new')
+      expect(page).to have_content('Nome')   
+  end
+
+  it 'tests for show func' do
+    @user = CadastroUsuario.create(:nome => "leandro" , :email => "leandro@teste.com", :senha =>"123", :senha_confirmation => "123")
+    visit('/usuarios/' + @user.id.to_s)
+    expect(page).to have_content('leandro@teste.com')   
+  
   end
 
 end
