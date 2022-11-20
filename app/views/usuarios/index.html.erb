@@ -1,47 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="signup.css" media="screen" />
 
 
-	<div> 
-        <%= form_with scope: :usuario, url: usuarios_path, local: true do |form| %>
-            <p> 
-                <%= form.label :nome %><br>
-                <%= form.text_field :nome %>
-            </p>
-            
-            <p> 
-                <%= form.label :email %><br>
-                <%= form.text_field :email %>
-            </p>
-            
-            <p>
-                <div  id = "senha" name = "senha">
-                <%= form.label :senha %><br>
-                <%= form.password_field :senha %>
+</head>
+
+<body>
+
+
+    <div class="wrapper-buttons">
+
+        <a href="#" >Sign Up</a>
+      
+        <a href="#" >Sign In</a>
+        
+    </div>
+
+    <div class="wrapper-login">
+        <main class="container">
+            <form action="">
+                <div class="input-field">
+                    <input type="text" name="username" id="username" placeholder="Enter Your Username">
+                    <div class="underline"></div>
                 </div>
-            </p>
-             
-            <p>
-                <%= form.label :senha_confirmation %><br>
-                <%= form.password_field :senha_confirmation %>
-            </p>
-            
-            <p> 
-                <%= form.submit 'Sign up' %>
-            </p>
-            
-            <button id = "Sign in" style="color:red;">
-                <%= link_to "Sign in", '/login' %>
-            </button>
-        <% end %>
-        </div>	
-    
-<% if @usuarios.any? %>
-            <div id="error_explanation">
-                <h2><%= pluralize(@usuarios.count, "usuarios")  %>  banco de dados:</h2>
-            
-                <ul>
-                <% @usuarios.each do |msg| %>
-                <li><%= msg %></li>
-                <% end %>
-                </ul>
-            </div>
-<% end %>
+                <div class="input-field">
+                    <input type="password" name="email" id="email" placeholder="Enter Your Email">
+                    <div class="underline"></div>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                    <div class="underline"></div>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="passwordconfirmation" id="passwordconfirmation" placeholder="Enter Your Password again">
+                    <div class="underline"></div>
+                </div>
+
+                <input type="submit" value="Sign Up">
+            </form>
+        </main>
+    </div>
+
+</body>
+
+</html>
+
+	
