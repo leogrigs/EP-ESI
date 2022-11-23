@@ -6,7 +6,7 @@ When('I fill the form') do
     fill_in 'Name', :with => "Card name"
     fill_in 'Description', :with => "Card description"
     select "To Do", :from => "card_status"
-    fill_in 'Group', :with => 1
+    select "Group 0", :from => "card_group_id"
 end
 When('click on "Create Card"') do
     click_button 'Create Card'
@@ -71,4 +71,13 @@ Then('I should not see card with "To Do" status') do
 end
 Then('I should not see card with "Done" status') do
     have_no_content('Done')
+end
+
+# Select card group by description
+Given('I am on creating cards page') do
+    visit '/cards/new'
+end
+Then('I should see group descriptions in card select options') do
+    arr = Array.new(4) {|i| (i+1).to_s }
+    have_select('Something', :options => arr)
 end
