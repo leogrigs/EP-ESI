@@ -5,9 +5,13 @@ class CardsController < ApplicationController
   def index
     if params[:status]
       @cards = filter(params[:status])
+    elsif params[:group_id]
+      @cards = group_filter(params[:group_id])
     else
       @cards = Card.all
     end
+    # these are the groups buttons that appear on the left
+    @groups = Group.all
   end
 
   # GET /cards/1 or /cards/1.json
@@ -91,6 +95,10 @@ class CardsController < ApplicationController
           return Card.where(status: 'doing') 
         else
           return Card.where(status: 'done')
-      end
+        end
     end
-end
+
+    def group_filter(group_id)
+      return Card.where(group_id: group_id)
+    end
+  end
