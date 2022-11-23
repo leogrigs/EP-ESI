@@ -1,7 +1,4 @@
 
-<p> dasdasdnaksdapnsda</p>
-
-
 
 
 <%= form_for :sessions, url: sign_in_path do |f| %>
@@ -13,11 +10,11 @@
   <div class="field">
     <%= f.label :senha  %><br />
     <%= f.password_field :senha, autocomplete: "off" %>
+    <p>Senha errada</p>
   </div>
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
 <p>New user? <%= link_to "Sign up now!", '/usuarios' %></p>
-<p> TESTE ERRO</p>
+
 <% end %>
-<p> dasdasdnaksdapnsda</p>
