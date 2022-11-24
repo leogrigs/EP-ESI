@@ -17,10 +17,12 @@
         display: flex;
         justify-content: start;
         flex-wrap: wrap;
+        margin: 5px;
         align-items: center;
         gap: 32px;
         margin-bottom: 64px;
     }
+    
 
     &-filter{
         display: flex;
@@ -41,8 +43,19 @@
             flex-direction: row;
             justify-content: space-between;
             gap: 8px;
+            margin-bottom: 12px;
         }
-        
+
+        &-group{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 8px;
+            width: 100%;
+            button {
+                width: 100%;
+            }
+        }
         
         &-btn{
             color: #3000ff;
@@ -60,6 +73,5 @@
                 border-color: transparent;
             }
         }
-        
     }
 }
