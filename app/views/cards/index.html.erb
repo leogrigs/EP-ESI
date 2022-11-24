@@ -4,19 +4,27 @@
   <h1>Cards</h1>
   <div class='dashboard-news'>
     <a class="dashboard-filter-btn" href="/cards/new">
-      + New Group
-    </a>
-    <a class="dashboard-filter-btn" href="/groups/new">
       + New Card
+    </a>
+    <a class="dashboard-filter-btn" id="new-group" href="/groups/new">
+      + New Group
     </a>
   </div>
   <div class="dashboard-content">
-    <div class="dashboard-filter">
-      <%= button_to 'To Do-Filter', cards_filter_path('todo'), method: :get, class: "dashboard-filter-btn" %>
-      <%= button_to 'Doing-Filter', cards_filter_path('doing'), method: :get, class: "dashboard-filter-btn" %>
-      <%= button_to 'Done-Filter', cards_filter_path('done'), method: :get, class: "dashboard-filter-btn" %>    
-    </div>
-
+    <section>
+      <div class="dashboard-filter">
+        <%= button_to 'To Do-Filter', cards_filter_path('todo'), method: :get, class: "dashboard-filter-btn" %>
+        <%= button_to 'Doing-Filter', cards_filter_path('doing'), method: :get, class: "dashboard-filter-btn" %>
+        <%= button_to 'Done-Filter', cards_filter_path('done'), method: :get, class: "dashboard-filter-btn" %>
+      </div>
+      <hr>
+      <div class="dasboard-group_filter">
+        <% @groups.each do |group| %>
+          <%= button_to "#{group.description}", cards_group_filter_path(group.id), method: :get, class: "dashboard-filter-btn" %> 
+        <% end %>
+      </div> 
+    </section>
+    
     <div class="dashboard-cards">
       <% @cards.each do |card| %>
       <div id="card_<%=card.id%>">

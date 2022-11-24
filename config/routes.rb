@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   #Routes to filter cards by status
   get '/cards/status/:status', to: 'cards#index', as: 'cards_filter'
 
+  #Routes to filter cards by group
+  get '/cards/group/:group_id', to: 'cards#index', as: 'cards_group_filter' 
+
   # Defines the root path route ("/")
   # root "articles#index"
 
