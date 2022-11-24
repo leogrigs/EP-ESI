@@ -16,17 +16,17 @@ Then('I should see my group in the page') do
 end
 
 # Destroy group
-Given('I am on specific group page') do
-    group = Group.new(description: 'teste', card_qtd: 0)
-    group.save
-    visit '/groups/1'
-end
-When('I click on "Destroy this group"') do
-    click_button 'Destroy this group'
-end
-Then('I should see confirmation of my group deletion') do
-    have_content('Group was successfully destroyed.')
-end
+# Given('I am on specific group page') do
+#     group = Group.new(description: 'teste', card_qtd: 0)
+#     group.save
+#     visit '/groups/1'
+# end
+# When('I click on "Destroy this group"') do
+#     click_button 'Destroy this group'
+# end
+# Then('I should see confirmation of my group deletion') do
+#     have_content('Group was successfully destroyed.')
+# end
 
 # Update group
 Given('I am on an edit group page') do
@@ -45,8 +45,8 @@ end
 
 # Filter cards by group
 Given('I should see "group 1" on card page') do
-    group1 = Group.create(description: 'group 1', card_qtd: 0, id:1)
-    group2 = Group.create(description: 'group 2', card_qtd: 0, id:2)
+    group1 = Group.create(description: 'group 1', card_qtd: 0)
+    group2 = Group.create(description: 'group 2', card_qtd: 0)
     visit '/cards'
     have_content('group 1')
 end

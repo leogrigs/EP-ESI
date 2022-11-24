@@ -9,11 +9,6 @@ Feature: Group
         And click on "Create Group"
         Then I should see my group in the page
     
-    Scenario: Destroy group
-        Given I am on specific group page
-        When I click on "Destroy this group"
-        Then I should see confirmation of my group deletion
-
     Scenario: Update group
         Given I am on an edit group page
         When I change group description to "Group edited"
