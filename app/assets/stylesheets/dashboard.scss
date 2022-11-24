@@ -18,22 +18,48 @@
         justify-content: start;
         flex-wrap: wrap;
         margin: 5px;
-        align-items: center;
         gap: 32px;
         margin-bottom: 64px;
     }
+    
 
     &-filter{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         margin-right: 16px;
+        box-sizing: border-box;
+
+        &-reset{
+            button{
+                width: 100%;
+            }
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        &-general{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        &-group{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 8px;
+            width: 100%;
+            button {
+                width: 100%;
+            }
+        }
         
         &-btn{
             color: #3000ff;
             font-weight: 600;
             width: max-content;
-            margin-right: 8px;
-            margin-bottom: 3px;
             border: 1px solid #7A5CFA;
             background-color: transparent;
             padding: 8px;

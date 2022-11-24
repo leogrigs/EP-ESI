@@ -3,27 +3,33 @@
 <div class='dashboard'>
   <h1>Cards</h1>
   <div class='dashboard-news'>
+    <a class="dashboard-filter-btn" href="/groups/new" id="new-group">
+      + New Group
+    </a>
     <a class="dashboard-filter-btn" href="/cards/new">
       + New Card
     </a>
-    <a class="dashboard-filter-btn" id="new-group" href="/groups/new">
-      + New Group
-    </a>
   </div>
   <div class="dashboard-content">
-    <section>
-      <div class="dashboard-filter">
-        <%= button_to 'To Do-Filter', cards_filter_path('todo'), method: :get, class: "dashboard-filter-btn" %>
-        <%= button_to 'Doing-Filter', cards_filter_path('doing'), method: :get, class: "dashboard-filter-btn" %>
-        <%= button_to 'Done-Filter', cards_filter_path('done'), method: :get, class: "dashboard-filter-btn" %>
+    <div class="dashboard-filter">
+      <div class="dashboard-filter-reset">
+          <%= button_to 'Reset Filters', cards_path('todo'), method: :get, class: "dashboard-filter-btn" %>
       </div>
-      <hr>
-      <div class="dasboard-group_filter">
+      <div class="dashboard-filter-general">
+          <%= button_to 'To Do-Filter', cards_filter_path('todo'), method: :get, class: "dashboard-filter-btn" %>
+          <%= button_to 'Doing-Filter', cards_filter_path('doing'), method: :get, class: "dashboard-filter-btn" %>
+          <%= button_to 'Done-Filter', cards_filter_path('done'), method: :get, class: "dashboard-filter-btn" %>    
+      </div>
+
+      <div class="dashboard-filter-group">
         <% @groups.each do |group| %>
           <%= button_to "#{group.description}", cards_group_filter_path(group.id), method: :get, class: "dashboard-filter-btn" %> 
         <% end %>
       </div> 
-    </section>
+    </div>
+
+  
+   
     
     <div class="dashboard-cards">
       <% @cards.each do |card| %>

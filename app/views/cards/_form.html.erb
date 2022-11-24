@@ -28,7 +28,7 @@
 
   <div>
     <%= form.label :group_id, style: "display: block" %>
-    <%= form.number_field :group_id %>
+    <%= form.collection_select(:group_id, Group.all, :id, :description, prompt: true) %>
   </div>
 
   <div>
