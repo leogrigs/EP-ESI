@@ -24,15 +24,30 @@
 
     &-filter{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         margin-right: 16px;
+        box-sizing: border-box;
+
+        &-reset{
+            button{
+                width: 100%;
+            }
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        &-general{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 8px;
+        }
         
         
         &-btn{
             color: #3000ff;
             font-weight: 600;
             width: max-content;
-            margin-right: 8px;
             border: 1px solid #7A5CFA;
             background-color: transparent;
             padding: 8px;

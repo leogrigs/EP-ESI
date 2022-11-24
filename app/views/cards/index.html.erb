@@ -12,9 +12,14 @@
   </div>
   <div class="dashboard-content">
     <div class="dashboard-filter">
+  <div class="dashboard-filter-reset">
+      <%= button_to 'Reset Filters', cards_path('todo'), method: :get, class: "dashboard-filter-btn" %>
+  </div>
+  <div class="dashboard-filter-general">
       <%= button_to 'To Do-Filter', cards_filter_path('todo'), method: :get, class: "dashboard-filter-btn" %>
       <%= button_to 'Doing-Filter', cards_filter_path('doing'), method: :get, class: "dashboard-filter-btn" %>
       <%= button_to 'Done-Filter', cards_filter_path('done'), method: :get, class: "dashboard-filter-btn" %>    
+  </div>
     </div>
 
     <div class="dashboard-cards">

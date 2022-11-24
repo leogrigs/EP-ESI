@@ -81,3 +81,19 @@ Then('I should see group descriptions in card select options') do
     arr = Array.new(4) {|i| (i+1).to_s }
     have_select('Something', :options => arr)
 end
+
+# Reset filter of cards
+Given('I am on todo filtered cards page') do
+    visit '/cards/status/todo'
+end
+Then('I should not see Done cards') do
+    have_no_content('Done')
+end
+When('I click on Reset Filter button') do
+    click_button 'Reset Filters'
+end
+Then('I should see Done cards again') do
+    have_content('Done')
+end
+
+
