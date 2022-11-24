@@ -32,3 +32,14 @@ Feature: Card
         When I click on "Doing-Filter"
         Then I should not see card with "To Do" status
         Then I should not see card with "Done" status
+
+
+    Scenario: Select card group by description
+        Given I am on creating cards page
+        Then I should see group descriptions in card select options
+
+    Scenario: Reset filter of cards
+        Given I am on todo filtered cards page
+        Then I should not see Done cards
+        When I click on Reset Filter button
+        Then I should see Done cards again
