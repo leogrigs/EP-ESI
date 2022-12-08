@@ -43,3 +43,9 @@ Feature: Card
         Then I should not see Done cards
         When I click on Reset Filter button
         Then I should see Done cards again
+
+    Scenario: Edit card by link
+        Given I am on initial cards page
+        When I click on my card name
+        Then I should be on this card edit page
+        

@@ -96,4 +96,15 @@ Then('I should see Done cards again') do
     have_content('Done')
 end
 
+# Edit card by link
+Given('I am on initial cards page') do
+    visit '/cards'
+end
+When('I click on my card name') do
+    click_link('Card 0')
+end
+Then('I should be on this card edit page') do
+    have_current_path('/cards/1/edit')
+end
+
 
