@@ -53,4 +53,28 @@ RSpec.feature "Usuarios", type: :feature do
     
     end
 
+    context 'Logar usuario' do
+    
+        before(:each) do
+            visit usuarios_path
+            within('form') do
+              fill_in 'Nome', with: 'teste'
+              fill_in 'Email', with: 'email@email.com'
+              fill_in 'Senha', with: 'senha'
+              fill_in 'Senha confirmation', with: 'senha'
+            end
+        end
+        
+        scenario "senha errada " do
+            visit("/login")
+            within('form') do
+                fill_in 'Email', with: 'email@email.com'
+                fill_in 'Senha', with: ''
+              end
+            click_button('Log')
+            expect(page).to have_content("Senha errada")
+            end
+    
+    end
+
 end

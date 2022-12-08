@@ -6,7 +6,7 @@ When('I fill the form') do
     fill_in 'Name', :with => "Card name"
     fill_in 'Description', :with => "Card description"
     select "To Do", :from => "card_status"
-    fill_in 'Group', :with => 1
+    select "Group 0", :from => "card_group_id"
 end
 When('click on "Create Card"') do
     click_button 'Create Card'
@@ -72,3 +72,39 @@ end
 Then('I should not see card with "Done" status') do
     have_no_content('Done')
 end
+
+# Select card group by description
+Given('I am on creating cards page') do
+    visit '/cards/new'
+end
+Then('I should see group descriptions in card select options') do
+    arr = Array.new(4) {|i| (i+1).to_s }
+    have_select('Something', :options => arr)
+end
+
+# Reset filter of cards
+Given('I am on todo filtered cards page') do
+    visit '/cards/status/todo'
+end
+Then('I should not see Done cards') do
+    have_no_content('Done')
+end
+When('I click on Reset Filter button') do
+    click_button 'Reset Filters'
+end
+Then('I should see Done cards again') do
+    have_content('Done')
+end
+
+# Edit card by link
+Given('I am on initial cards page') do
+    visit '/cards'
+end
+When('I click on my card name') do
+    click_link('Card 0')
+end
+Then('I should be on this card edit page') do
+    have_current_path('/cards/1/edit')
+end
+
+

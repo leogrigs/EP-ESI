@@ -64,7 +64,7 @@ end
 #Go to new group page
 Given ('I shoud see "New Group" on card page') do
     visit '/cards'
-    have_content('New Group')
+    have_content('+ New Group')
 end
 When ('I click on "New Group" link') do
     click_on(id: "new-group")

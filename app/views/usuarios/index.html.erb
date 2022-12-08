@@ -34,14 +34,3 @@
         <% end %>
         </div>	
     
-<% if @usuarios.any? %>
-            <div id="error_explanation">
-                <h2><%= pluralize(@usuarios.count, "usuarios")  %>  banco de dados:</h2>
-            
-                <ul>
-                <% @usuarios.each do |msg| %>
-                <li><%= msg %></li>
-                <% end %>
-                </ul>
-            </div>
-<% end %>
