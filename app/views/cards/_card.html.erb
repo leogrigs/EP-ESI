@@ -1,6 +1,9 @@
 <div id="<%= dom_id card %>" class="card">
   <div class="card-title">
-      <span><%= card.name %></span>
+      <span>
+      <%= link_to "#{card.name}", "/cards/#{card.id}/edit" %>
+      
+      </span>
       <span class="card-group"><%= Group.find(card.group_id).description %></span>
   </div>
   <div class="card-description">
