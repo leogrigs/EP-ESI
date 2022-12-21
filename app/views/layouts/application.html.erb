@@ -12,7 +12,9 @@
 
   <body>
     <%= render "shared/header" %>
+    <main style="min-height: calc(100vh - 104.44px); display: flex; align-items: center; flex-direction: column">
     <%= yield %>
+    </main>
     <%= render "shared/footer" %>
   </body>
 </html>
