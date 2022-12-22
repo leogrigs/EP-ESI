@@ -1,10 +1,14 @@
+
+
 <div id="<%= dom_id card %>" class="card">
   <div class="card-title">
+  <%= button_to 'Claim card', add_user_to_card_path(card.id), method: :put, class: "card-status-btn" %>
         <span><%= link_to "#{card.name} - ", "/cards/#{card.id}/edit" %></span>
         <span class="card-group">
             <%= link_to Group.find(card.group_id).description, edit_group_path(card.group) %>
         </span>
   </div>
+  
   <div class="card-description">
       <span><%= card.description %></span>
   </div>
@@ -16,9 +20,23 @@
           </a>
           </button>
       </div>
+      
+      <span>Owner: <%=
+      if (@usuario = CadastroUsuario.find_by(id: @card_id = card.cadastro_usuario_id))
+        @usuario.nome
+      end
+      %></span>
       <div class="card-status">
+      Owner:
+      <%=        
+      if card.cadastro_usuario_id 
+          @usuario = CadastroUsuario.find_by(id: card.cadastro_usuario_id)
+          @usuario.nome
+      end
+      %>
           <%= button_to '<', previous_status_path(card.id), method: :put, class: "card-status-btn" %>
           <span><%= format_status(card.status) %></span>
+          
           <%= button_to '>', next_status_path(card.id), method: :put, class: "card-status-btn" %>
       </div>
   </div>

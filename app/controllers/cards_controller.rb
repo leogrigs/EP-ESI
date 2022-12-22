@@ -3,15 +3,16 @@ class CardsController < ApplicationController
 
   # GET /cards or /cards.json
   def index
-    if params[:status]
+      if params[:status]
       @cards = filter(params[:status])
-    elsif params[:group_id]
-      @cards = group_filter(params[:group_id])
-    else
-      @cards = Card.all
-    end
-    # these are the groups buttons that appear on the left
-    @groups = Group.all
+      elsif params[:group_id]
+        @cards = group_filter(params[:group_id])
+      else
+        @cards = Card.all
+      end
+      # these are the groups buttons that appear on the left
+      @groups = Group.all
+    
   end
 
   # GET /cards/1 or /cards/1.json
@@ -29,6 +30,7 @@ class CardsController < ApplicationController
 
   # POST /cards or /cards.json
   def create
+    
     @card = Card.new(card_params)
     respond_to do |format|
       if @card.save
@@ -43,6 +45,7 @@ class CardsController < ApplicationController
 
   # PATCH/PUT /cards/1 or /cards/1.json
   def update
+    
     respond_to do |format|
       if @card.update(card_params)
         format.html { redirect_to card_url(@card), notice: "Card was successfully updated." }
@@ -76,6 +79,13 @@ class CardsController < ApplicationController
     redirect_to '/cards'     
   end
 
+  def add_user_to_card()
+    @card = Card.find_by(id: params[:id])
+    @card.update(cadastro_usuario_id: session[:user_id])
+    @card.save
+    redirect_to '/cards'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_card
@@ -86,6 +96,8 @@ class CardsController < ApplicationController
     def card_params
       params.require(:card).permit(:name, :description, :status, :group_id)
     end
+
+    
 
     def filter(status)
       case status
