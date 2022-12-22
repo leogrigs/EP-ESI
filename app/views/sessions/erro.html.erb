@@ -18,7 +18,7 @@
                 </p>
 <div>
     <h2>Log In</h2>
-    <%= form_with url: "/login", model: @user do |form| %>
+    <%= form_with url: "/login", model: @user, id: "form" do |form| %>
         <p>
         <%= form.label :username %><br>
         <%= form.text_field :username %>
