@@ -1,5 +1,6 @@
 # Add card
 Given('I am on create card page') do
+    
     visit '/cards/new'
 end
 When('I fill the form') do
