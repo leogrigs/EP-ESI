@@ -29,15 +29,30 @@ RSpec.describe "/cards", type: :request do
     group = Group.new(description: 'teste', card_qtd: 0)
     group.save
 
-    @user = CadastroUsuario.create(:nome => "leandro" , :email => "leandro@teste.com", :senha =>"123", :senha_confirmation => "123")
+    @user = CadastroUsuario.new(:nome => "leandro" , :email => "leandro@teste.com", :senha =>"123", :senha_confirmation => "123")
+    @user.save
     post "/sign_in", :params =>  { :sessions => { :email => "leandro@teste.com", :senha =>"123"}}
   end
 
+  
   describe "GET /index" do
     it "renders a successful response" do
       Card.create! valid_attributes
       get cards_url
       expect(response).to be_successful
+    end
+  end
+
+  describe "PUT /add_user_to_card" do
+    before(:each) do
+      get '/login'
+      expect(page).to redirect_to('/usuarios/' + @user.id.to_s)
+    end
+    it "renders a successful response" do
+      card = Card.create(name: 'my card', description: 'this card descript.', status: 'doing', group_id: 1)
+      put add_user_to_card_path(card.id)
+      card.reload
+      expect(card.cadastro_usuario_id).to eql(1)
     end
   end
 
