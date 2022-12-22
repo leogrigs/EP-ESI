@@ -1,0 +1,16 @@
+include PostsHelper
+
+
+
+RSpec.describe PostsHelper, type: :helper do
+  it 'atribui um usuário a uma postagem' do
+    criador_do_post = User.first_or_create!(email: 'lbaccarincosta@usp.br', password: 'password', password_confirmation: 'password')
+    @post = Post.new(
+      title: 'TesteTitulo',
+      body: 'TesteBody',
+      views: 1
+    )
+    assign_post_creator(@post, criador_do_post)
+    expect(@post.user).to be(criador_do_post)
+  end
+end
