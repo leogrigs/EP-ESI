@@ -28,6 +28,9 @@ RSpec.describe "/cards", type: :request do
   before(:each) do
     group = Group.new(description: 'teste', card_qtd: 0)
     group.save
+
+    @user = CadastroUsuario.create(:nome => "leandro" , :email => "leandro@teste.com", :senha =>"123", :senha_confirmation => "123")
+    post "/sign_in", :params =>  { :sessions => { :email => "leandro@teste.com", :senha =>"123"}}
   end
 
   describe "GET /index" do
