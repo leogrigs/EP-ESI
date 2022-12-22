@@ -25,4 +25,7 @@ Feature: Group
         Given I shoud see "New Group" on card page
         When I click on "New Group" link
         Then I shoud see the "Create Group" button
-        
+
+    Scenario: Group form styles
+        Given I am on group form page
+        Then I should see one form with form id
