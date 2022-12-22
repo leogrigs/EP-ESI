@@ -1,7 +1,7 @@
 
 
 	<div> 
-        <%= form_with scope: :usuario, url: usuarios_path, local: true do |form| %>
+        <%= form_with scope: :usuario, url: usuarios_path, local: true, id: "form" do |form| %>
             <p> 
                 <%= form.label :nome %><br>
                 <%= form.text_field :nome %>

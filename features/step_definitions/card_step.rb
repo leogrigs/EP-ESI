@@ -46,7 +46,7 @@ Given('I am on cards page') do
     visit '/cards'
 end
 When('I click to change to next status') do
-    find(:xpath, "/html/body/div/div[2]/div/div[1]/div/div[3]/div[2]/form[2]/button").click
+    find(:xpath, "/html/body/main/div/div[2]/div[2]/div[4]/div/div[3]/div[2]/form[2]/button").click
 end
 When('I go to this card page') do
     visit '/cards/4'
@@ -106,6 +106,14 @@ When('I click on my card name') do
 end
 Then('I should be on this card edit page') do
     have_current_path('/cards/1/edit')
+end
+
+# Card form styles
+Given('I am on card form page') do
+    visit '/cards/new'
+end
+Then('I should see a form with form id') do
+    have_css('form#form')
 end
 
 

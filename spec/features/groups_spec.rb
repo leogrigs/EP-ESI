@@ -74,7 +74,7 @@ RSpec.feature "Groups", type: :feature do
     scenario "should be successfull" do
       visit cards_path
       expect(page).to have_content 'This is description for card 1'
-      find(:xpath, "/html/body/div/div[2]/div/div[1]/div/div[1]/span[2]/a").click
+      find(:xpath, "/html/body/main/div/div[2]/div[2]/div[1]/div/div[1]/span[2]/a").click
       expect(current_path).to eq '/groups/1/edit'
       expect(page).to have_button 'Update Group'
     end
