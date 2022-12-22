@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   #Routes to filter cards by group
   get '/cards/group/:group_id', to: 'cards#index', as: 'cards_group_filter' 
 
+
+  put '/add_user_to_card/:id', to: 'cards#add_user_to_card', as: 'add_user_to_card'
+
   # Defines the root path route ("/")
   # root "articles#index"
 

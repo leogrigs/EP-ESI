@@ -76,6 +76,13 @@ class CardsController < ApplicationController
     redirect_to '/cards'     
   end
 
+  def add_user_to_card()
+    @card = Card.find_by(id: params[:id])
+    @card.update(cadastro_usuario_id: session[:user_id])
+    @card.save
+    redirect_to '/cards'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_card
