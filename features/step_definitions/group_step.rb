@@ -72,3 +72,11 @@ end
 Then ('I shoud see the "Create Group" button') do
     have_content('Create Group')
 end
+
+# Group form styles
+Given('I am on group form page') do
+    visit '/groups/new'
+end
+Then('I should see one form with form id') do
+    have_css('form#form')
+end
