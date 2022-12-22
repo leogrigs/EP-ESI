@@ -23,5 +23,14 @@ class Card < ApplicationRecord
                 self.status = :doing 
         end
     end
+
+    def add_user_to_card
+        case self.cadastro_usuario_id 
+            when nil
+                self.cadastro_usuario_id = 1
+            when 1
+                self.cadastro_usuario_id = nil
+        end
+    end
     
 end

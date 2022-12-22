@@ -53,4 +53,12 @@ RSpec.describe Card, type: :model do
       expect(card.status).to eql('doing')
     end
   end
+
+  context "Claim card" do
+    it "Must show user in card when claim card button is pressed" do
+      card = Card.new({name: 'card name', status: 'todo',group_id: 1, cadastro_usuario_id: nil})
+      card.add_user_to_card()
+      expect(card.cadastro_usuario_id).to eql(1)
+    end
+  end
 end
