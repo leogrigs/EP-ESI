@@ -1,6 +1,7 @@
 # Add card
 Given('I am on create card page') do
-    visit '/cards'
+    
+    visit '/cards/new'
 end
 When('I fill the form') do
     fill_in 'Name', :with => "Card name"

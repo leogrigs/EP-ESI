@@ -3,9 +3,6 @@ class CardsController < ApplicationController
 
   # GET /cards or /cards.json
   def index
-    if !current_user.present?
-      redirect_to '/usuarios/'
-    else 
       if params[:status]
       @cards = filter(params[:status])
       elsif params[:group_id]
@@ -15,7 +12,7 @@ class CardsController < ApplicationController
       end
       # these are the groups buttons that appear on the left
       @groups = Group.all
-    end
+    
   end
 
   # GET /cards/1 or /cards/1.json
@@ -81,7 +78,7 @@ class CardsController < ApplicationController
     @card.save
     redirect_to '/cards'     
   end
-  def add_user_to_card
+  def add_user_to_card()
         @card = Card.find(params[:id])
         @card.update(cadastro_usuario_id: session[:user_id]) 
         @card.save

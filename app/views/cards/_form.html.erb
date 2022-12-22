@@ -36,7 +36,3 @@
   </div>
   
 <% end %>
-<% if @card.cadastro_usuario_id%>
-          <p> This card has a owner </p>
-<% end %>
-<%= button_to 'Claim Card' ,method: :put, class: "card-status-btn" %>

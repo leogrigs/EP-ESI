@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  post '/cards/:id/edit', to: 'cards#add_user_to_card'
+  put '/add_user_to_card/:id', to: 'cards#add_user_to_card', as: 'user_to_card'
 
   root 'welcome#index'
 
