@@ -48,4 +48,8 @@ Feature: Card
         Given I am on initial cards page
         When I click on my card name
         Then I should be on this card edit page
+
+    Scenario: Card form styles
+        Given I am on card form page
+        Then I should see a form with form id
         
