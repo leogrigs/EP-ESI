@@ -16,6 +16,11 @@
           </a>
           </button>
       </div>
+      <span>Owner: <%=
+      usuario = CadastroUsuario.find_by(id: card.cadastro_usuario_id)
+      usuario.nome
+      
+      %></span>
       <div class="card-status">
           <%= button_to '<', previous_status_path(card.id), method: :put, class: "card-status-btn" %>
           <span><%= format_status(card.status) %></span>
