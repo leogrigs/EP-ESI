@@ -16,6 +16,16 @@ RSpec.describe "cards/index", type: :view do
         group_id: 2
       )
     ])
+    assign(:groups, [
+      Groups.create!(
+        description: "Description",
+        card_qtd: 1
+      ),
+      Groups.create!(
+        description: "Description",
+        card_qtd: 1
+      )
+    ])
   end
 
   # it "renders a list of cards" do

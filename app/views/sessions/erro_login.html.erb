@@ -1,7 +1,7 @@
 
 
 
-<%= form_for :sessions, url: sign_in_path do |f| %>
+<%= form_for :sessions, url: sign_in_path, id: "form" do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
