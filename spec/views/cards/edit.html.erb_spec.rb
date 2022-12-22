@@ -10,18 +10,13 @@ RSpec.describe "cards/edit", type: :view do
     ))
   end
 
-  # it "renders the edit card form" do
-  #   render
-
-  #   assert_select "form[action=?][method=?]", card_path(@card), "post" do
-
-  #     assert_select "input[name=?]", "card[name]"
-
-  #     assert_select "input[name=?]", "card[description]"
-
-  #     assert_select "input[name=?]", "card[status]"
-
-  #     assert_select "input[name=?]", "card[group_id]"
-  #   end
-  # end
+  it "renders the edit card form" do
+    render
+    assert_select "form[action=?][method=?]", card_path(@card), "post" do
+      assert_select "input[name=?]", "card[name]"
+      assert_select "input[name=?]", "card[description]"
+      assert_select "select[name=?]", "card[status]"
+      assert_select "select[name=?]", "card[group_id]"
+    end
+  end
 end
